@@ -21,7 +21,7 @@ st.write(get_ran_num())
 
 st.write('I love cats')
 
-# st.image('data/best_cat.png')
+st.image('data/best_cat.png')
 
 df = pd.DataFrame({
     'first column': list(range(1, 11)),
