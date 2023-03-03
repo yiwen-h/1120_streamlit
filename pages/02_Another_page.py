@@ -1,6 +1,10 @@
 import streamlit as st
 from datetime import date
 
+st.set_page_config(
+        page_title="My Page Title",
+)
+
 today = str(date.today())
 
 name = st.text_input('What is your name?')
