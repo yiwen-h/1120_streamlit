@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 import datetime
 import requests
 
@@ -37,5 +37,8 @@ with st.form(key='params_for_api'):
         prediction = response.json()
 
         pred = prediction['fare']
-
         st.header(f'Fare amount: ${round(pred, 2)}')
+
+        map_df = pd.DataFrame({'lat': [pickup_latitude, dropoff_latitude],
+                               'lon': [pickup_longitude, dropoff_longitude]})
+        st.map(map_df)
